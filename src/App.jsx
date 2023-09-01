@@ -1,32 +1,24 @@
 import React from 'react';
-import Produto from './Produto';
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
+import Home from './Components/Home';
+import Login from './Components/Login/Login';
 
-const App = () => {
-  const [produto, setProduto] = React.useState(null);
-
-  React.useEffect(() => {
-    const produtoLocal = window.localStorage.getItem('produto');
-    if (produtoLocal !== 'null') setProduto(produtoLocal);
-  }, []);
-
-  React.useEffect(() => {
-    if (produto !== null) window.localStorage.setItem('produto', produto);
-  }, [produto]);
-
-  function handleClick({ target }) {
-    setProduto(target.innerText);
-  }
-
+function App() {
   return (
     <div>
-      <h1>Preferência: {produto}</h1>
-      <button style={{ marginRight: '1rem' }} onClick={handleClick}>
-        notebook
-      </button>
-      <button onClick={handleClick}>smartphone</button>
-      <Produto produto={produto} />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/login' element={<Login />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
-};
+}
 
 export default App;
