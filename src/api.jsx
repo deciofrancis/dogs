@@ -6,7 +6,7 @@ export function TOKEN_POST(body) {
         options: {
             method: 'POST',
             headers: {
-                'Content-Type': 'appliocation/json',
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(body),
         },
@@ -43,7 +43,7 @@ export function USER_POST(body) {
         options: {
             method: 'POST',
             headers: {
-                'Content-Type': 'appliocation/json',
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(body),
         },
