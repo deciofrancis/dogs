@@ -1,7 +1,7 @@
 import React from 'react';
 import UserHeaderNav from './UserHeaderNav';
+import styles from './UserHeader.module.css';
 import { useLocation } from 'react-router-dom';
-
 
 const UserHeader = () => {
   const [title, setTitle] = React.useState('');
@@ -9,10 +9,10 @@ const UserHeader = () => {
 
   React.useEffect(() => {
     const { pathname } = location;
-    switch(pathname) {
+    switch (pathname) {
       case '/conta/postar':
         setTitle('Poste sua foto');
-        break
+        break;
       case '/conta/estatisticas':
         setTitle('Estatisticas');
         break;
@@ -22,7 +22,7 @@ const UserHeader = () => {
   }, [location]);
 
   return (
-    <header className={StyleSheet.header}>
+    <header className={styles.header}>
       <h1 className="title">{title}</h1>
       <UserHeaderNav />
     </header>

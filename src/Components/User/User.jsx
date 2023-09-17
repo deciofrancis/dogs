@@ -6,14 +6,16 @@ import UserPhotoPost from './UserPhotoPost';
 import UserStats from './UserStats';
 
 const User = () => {
-  return <section>
+  return (
+  <section className="container">
     <UserHeader />
     <Routes>
-      <Route patch="/" element={<Feed />} />
-      <Route patch="postar" element={<UserPhotoPost />} />
-      <Route patch="estatisticas" element={<UserStats />} />
+      <Route path="/" element={<Feed />} />
+      <Route path="postar" element={<UserPhotoPost />} />
+      <Route path="estatisticas" element={<UserStats />} />
     </Routes>
   </section>
-}
+  );
+};
 
 export default User;
