@@ -28,6 +28,7 @@ const UserPhotoPost = () => {
 
   function handleImgChange({target}) {
     setImg({
+      preview: URL.createObjectURL(target.files[0]),
       raw: target.files[0],
     })
   }
@@ -37,11 +38,14 @@ const UserPhotoPost = () => {
       <section className={`${styles.photoPost} animeLeft`}>
           <form onSubmit={handleSubmit}>
               <Input label="Nome" type="text" name="name" {...nome} />
-              <Input label="Peso" type="text" name="peso" {...peso} />
-              <Input label="Idade" type="text" name="idade" {...idade} />
-              <input type="file" name="img" id="img" onChange={handleImgChange} />
+              <Input label="Peso" type="number" name="peso" {...peso} />
+              <Input label="Idade" type="number" name="idade" {...idade} />
+              <input className={styles.file} type="file" name="img" id="img" onChange={handleImgChange} />
               <Button>Enviar</Button>
           </form>
+          <div>
+            {img.preview && <div className={styles.preview} style={{backgroudImage: `url('${img.preview}')`}}></div>}
+          </div>
       </section>
     </>
   );
