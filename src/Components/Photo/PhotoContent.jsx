@@ -3,7 +3,7 @@ import styles from './PhotoContent.module.css';
 import { Link } from 'react-router-dom';
 import PhotoComments from './PhotoComments';
 
-const PhotoContent = ( {data}) => {
+const PhotoContent = ({ data }) => {
     const { photo, comments } = data;
     return (
         <div className={styles.photo}>
@@ -24,10 +24,10 @@ const PhotoContent = ( {data}) => {
                         <li>{photo.idade} anos</li>
                     </ul>
                 </div>
+                <PhotoComments id={photo.id} comments={comments} />
             </div>
-            <PhotoComments id={photo.id} comments={comments} />
         </div>
-    )
-}
+    );
+};
 
 export default PhotoContent;
