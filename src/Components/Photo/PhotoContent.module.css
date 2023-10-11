@@ -1,7 +1,7 @@
 .photo {
     margin: auto;
     height: 36rem;
-    border-radius: .2rem;
+    border-radius: 0.2rem;
     background: white;
     display: grid;
     grid-template-columns: 36rem 20rem;
@@ -23,7 +23,7 @@
     padding: 2rem 2rem 0 2rem;
 }
 
-img {
+.img {
     grid-row: 1/4;
 }
 

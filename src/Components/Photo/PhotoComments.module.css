@@ -1,9 +1,9 @@
-.commments {
+.comments {
     overflow-y: auto;
     word-break: break-word;
 }
 
-.commments li {
+.comments li {
     margin-bottom: 0.5rem;
     line-height: 1.2;
 }
