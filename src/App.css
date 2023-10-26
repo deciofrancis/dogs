@@ -93,4 +93,7 @@ a {
 
 .AppBody {
     float: 1;
+    display: flex;
 }
+
+
