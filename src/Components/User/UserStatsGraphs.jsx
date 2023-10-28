@@ -42,6 +42,11 @@ const UserStatsGraphs = ({ data }) => {
                     }}
                 />
             </div>
+            <div>
+                <VictoryChart>
+                    <VictoryBar alignment='start' data={graph}></VictoryBar>
+                </VictoryChart>
+            </div>
         </section>
     )
 }
