@@ -94,3 +94,7 @@ a {
 .AppBody {
     float: 1;
 }
+
+.VictoryContainer {
+    height: inherit !important;
+}
