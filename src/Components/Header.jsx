@@ -20,7 +20,6 @@ const Header = () => {
                 ) : (
                     <Link className={styles.login} to="/Login">
                         Login / Criar
-                        <button onClick={userLogout}>Sair</button>
                     </Link>
                 )}
             </nav>
