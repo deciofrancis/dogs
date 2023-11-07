@@ -7,14 +7,15 @@ const UserStatsGraphs = ({ data }) => {
     const [total, setTotal] = React.useState(0);
 
     React.useEffect(() => {
-        const graphData = data.map(item => {
+        const graphData = data.map((item) => {
             return {
                 x: item.title,
-                y: Number(item.acessos)
-            }
-        })
+                y: Number(item.acessos),
+            };
+        });
+
         setTotal(
-            data.map(({ acessos }) => Number(acessos)).reduce((a, b) => a + b , 0),
+            data.map(({ acessos }) => Number(acessos)).reduce((a, b) => a + b, 0),
         );
         setGraph(graphData);
     }, [data]);
@@ -26,29 +27,29 @@ const UserStatsGraphs = ({ data }) => {
             </div>
             <div className={styles.graphItem}>
                 <VictoryPie 
-                    data={[graph]} 
+                    data={graph} 
                     innerRadius={50}
-                    padding={{ top: 20, bottom: 2, left: 80, right: 80 }}
+                    padding={{ top: 20, bottom: 20, left: 80, right: 80 }}
                     style={{
                         data: {
-                            fillOpacity: .9,
+                            fillOpacity: 0.9,
                             stroke: '#fff',
-                            stroKeWidth: 2,
+                            strokeWidth: 2,
                         },
                         labels: {
                             fontSize: 14,
-                            fill: '#333'
-                        }
+                            fill: '#333',
+                        },
                     }}
                 />
             </div>
             <div className={styles.graphItem}>
                 <VictoryChart>
-                    <VictoryBar alignment='start' data={graph}></VictoryBar>
+                    <VictoryBar alignment="start" data={graph}></VictoryBar>
                 </VictoryChart>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default UserStatsGraphs;

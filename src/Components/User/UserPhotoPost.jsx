@@ -25,28 +25,27 @@ const UserPhotoPost = () => {
       event.preventDefault();
       const formData = new FormData();
       formData.append('img', img.raw);
-      formData.append('nome', nome.raw);
-      formData.append('peso', peso.raw);
-      formData.append('idade', idade.raw);
+      formData.append('nome', nome.value);
+      formData.append('peso', peso.value);
+      formData.append('idade', idade.value);
 
       const token = window.localStorage.getItem('token');
-      const {url, options} = PHOTO_POST(formData, token);
+      const { url, options } = PHOTO_POST(formData, token);
       request(url, options);
   }
 
-  function handleImgChange({target}) {
+  function handleImgChange({ target }) {
     setImg({
       preview: URL.createObjectURL(target.files[0]),
       raw: target.files[0],
-    })
+    });
   }
 
   return (
-    <>
       <section className={`${styles.photoPost} animeLeft`}>
-          <Head title="Post sua foto" />
+          <Head title="Poste sua foto" />
           <form onSubmit={handleSubmit}>
-              <Input label="Nome" type="text" name="name" {...nome} />
+              <Input label="Nome" type="text" name="nome" {...nome} />
               <Input label="Peso" type="number" name="peso" {...peso} />
               <Input label="Idade" type="number" name="idade" {...idade} />
               <input 
@@ -64,10 +63,14 @@ const UserPhotoPost = () => {
               <Error error={error} />
           </form>
           <div>
-            {img.preview && <div className={styles.preview} style={{backgroudImage: `url('${img.preview}')`}}></div>}
+            {img.preview && (
+              <div 
+                className={styles.preview} 
+                style={{ backgroundImage: `url('${img.preview}')` }}
+              ></div>
+            )}
           </div>
       </section>
-    </>
   );
 };
 
