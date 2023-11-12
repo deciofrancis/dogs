@@ -9,7 +9,7 @@ body {
     margin: 0px;
     color: #333;
     --type-first: Helvetica, Arial, sans-serif;
-    --type-second: 'Spectral', georgia;
+    --type-second: 'Spectral', Georgia;
     font-family: var(--type-first);
 }
 
@@ -68,7 +68,7 @@ a {
     position: absolute;
     bottom: 5px;
     left: -5px;
-    border-radius: .2rem;
+    border-radius: 0.2rem;
     z-index: -1;
 }
 
@@ -92,9 +92,9 @@ a {
 }
 
 .AppBody {
-    float: 1;
+    flex: 1;
 }
 
 .VictoryContainer {
-    height: inherit !important;
+    height: initial !important;
 }
