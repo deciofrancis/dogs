@@ -25,13 +25,13 @@ const LoginPasswordReset = () => {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    if(password.validate()) {
+    if (password.validate()) {
       const { url, options } = PASSWORD_RESET({
         login,
         key,
         password: password.value,
       });
-      const {response} = await request(url, options);
+      const { response } = await request(url, options);
       if (response.ok) navigate('/login');
     }
   }
@@ -41,16 +41,21 @@ const LoginPasswordReset = () => {
       <Head title="Reset a senha" />
       <h1 className="title">Resete a Senha</h1>
       <form onSubmit={handleSubmit}>
-        <Input label="Nova Senha" type="password" name="password" {...password} />
+        <Input 
+          label="Nova Senha" 
+          type="password" 
+          name="password" 
+          {...password} 
+          />
         {loading ? (
           <Button disabled>Resetando...</Button>
         ) : (
           <Button>Resetar</Button>
-        )};
+        )}
       </form>
       <Error error={error} />
     </section>
-  )
-}
+  );
+};
 
 export default LoginPasswordReset;
