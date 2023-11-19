@@ -42,14 +42,6 @@
     overflow: hidden;
 }
 
-.comments {
-    padding: 0 2rem;
-}
-
-.single.comments {
-    padding: 0px;
-}
-
 @media (max-width: 64rem) {
     .photo {
         height: auto;
@@ -57,7 +49,6 @@
         overflow-y: auto;
         grid-template-columns: minmax(20rem, 40rem);
     }
-
     .img {
         grid-row: 1;
     }
