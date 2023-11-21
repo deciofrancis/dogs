@@ -29,12 +29,16 @@ const UserHeaderNav = () => {
         <button 
           aria-label="Menu"
           className={`${styles.mobileButton} ${
-            mobileMenu && styles.mobileButtonActive}
-          `} 
+            mobileMenu && styles.mobileButtonActive
+          }`} 
           onClick={() => setMobileMenu(!mobileMenu)}
         ></button>
       )}
-      <nav className={`${mobile ? styles.navMobile : styles.nav} ${mobileMenu && styles.navMobileActive}`}>
+      <nav 
+        className={`${mobile ? styles.navMobile : styles.nav} ${
+          mobileMenu && styles.navMobileActive
+        }`}
+      >
           <NavLink to="/conta" end>
             <MinhasFotos />
             {mobile && 'Minhas Fotos'}
