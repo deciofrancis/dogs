@@ -18,13 +18,13 @@ const Header = () => {
                        {data.nome}
                     </Link>
                 ) : (
-                    <Link className={styles.login} to="/Login">
+                    <Link className={styles.login} to="/login">
                         Login / Criar
                     </Link>
                 )}
             </nav>
         </header>
-    )
-}
+    );
+};
 
 export default Header;
