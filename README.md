@@ -1,22 +1,17 @@
 <h1>:dog: <a href="#">Dogs</a>  🐶</h1>
 
-Rede social para cachorros desenvolvido no curo de React Completo na Origamid.
+Rede social para cachorros, desenvolvido no curo de React Completo na Origamid.
 #
-:computer: Desktop
 
-![desktop]()
+ [![Deploy with Vercel](https://vercel.com/button)](https://dogs-orpin-eight.vercel.app/)
 
-#
-<p align="center">:iphone: Mobile</p>
 
-<p align="center"><img src="#"/></p><br>
-
-[Clique para visitar o projeto]()
 ## :computer: Tecnologias
 
 - React
 - Vite
 - Eslint
+- Victory
 
 
 ##  🎮 Como usar
@@ -34,7 +29,7 @@ Instale as dependências:
   # com yarn
   $ yarn install
 ```
-Inicie o projeto com o comando:animais
+Inicie o projeto com o comando:
 ```bash
   # com npm
   $ npm run dev
