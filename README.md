@@ -1,7 +1,8 @@
 <h1>:dog: <a href="#">Dogs</a>  🐶</h1>
 
 Rede social para cachorros, desenvolvido no curo de React Completo na Origamid.
-#
+
+# Deploy
 
  [![Deploy with Vercel](https://vercel.com/button)](https://dogs-orpin-eight.vercel.app/)
 
@@ -12,6 +13,18 @@ Rede social para cachorros, desenvolvido no curo de React Completo na Origamid.
 - Vite
 - Eslint
 - Victory
+
+# Conhecimentos 
+
+- Hooks
+- React Router
+- useContext
+- CSS Modules
+- PropTypes
+- Componentes Funcionais
+- Propriedades
+- Eventos
+- Lib Victory, gerar gráficos
 
 
 ##  🎮 Como usar
